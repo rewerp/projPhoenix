@@ -13,12 +13,13 @@ import {
 
 import { styles } from './styles';
 import { theme } from '../../global/theme';
-import { ButtonDefault } from '../../components/button';
+import { ButtonDefault } from '../../components/buttonDefault';
+import EnviarEmail from '../recovery/functions';
 
 import LogoApp from '../../assets/logoPhoenix.png';
 import LogoDobes from '../../assets/logoDobes.png';
  
-function RecoveryPassword() {
+function RecoveryPassword({navigation}) {
    return(
       <SafeAreaView style={styles.main}  >
          <ScrollView style={styles.scrollView} contentContainerStyle={{flexGrow : 1, justifyContent : 'center'}} >
@@ -34,7 +35,8 @@ function RecoveryPassword() {
                />
                <View style={styles.viewInfo} >
                   <Text style={styles.textInfo} >
-                     Informe o login e clique em “Recuperar Senha”, enviaremos um link para redefinir a sua senha no e-mail em seu cadastro.
+                     Informe o login e clique em “Recuperar Senha”, 
+                     enviaremos um link para redefinir a sua senha no e-mail em seu cadastro.
                   </Text>
                </View>
                <View style={styles.content} >
@@ -44,9 +46,18 @@ function RecoveryPassword() {
                      style={styles.textInput} 
                      keyboardType="number-pad"
                   />
-                  <Text style={styles.text} >Voltar a tela de login</Text>   
+                  <Text 
+                     style={styles.text} 
+                     onPress={() => navigation.navigate('SignIn')} 
+                  >
+                     Voltar a tela de login
+                  </Text>   
                   <View style={styles.spacebetween} />
-                  <ButtonDefault style={styles.buttonAcessar} title="Recuperar Senha" _onPress={() => alert('Teste de press do botão')} />
+                  <ButtonDefault 
+                     style={styles.buttonAcessar} 
+                     title="Recuperar Senha" 
+                     _onPress={() => navigation.navigate('ResendMailPassword')} 
+                  />
                </View>
                <View>
                   <TouchableOpacity onPress={() => Linking.openURL('https://dobesone.com.br/')} >

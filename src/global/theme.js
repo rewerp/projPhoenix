@@ -1,3 +1,5 @@
+import { useFonts, Roboto_400Regular } from '@expo-google-fonts/roboto';
+
 export const theme = {
    colors: {
       backgroundApp: '#231F20',
@@ -10,5 +12,9 @@ export const theme = {
 
    statusBar: {
       statusbar: 'auto',
+   },
+
+   fonts: {
+      fontMain: 'Roboto_400Regular'
    }
 }

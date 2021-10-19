@@ -13,12 +13,12 @@ import {
 
 import { styles } from './styles';
 import { theme } from '../../global/theme';
-import { ButtonDefault } from '../../components/button';
+import { ButtonDefault } from '../../components/buttonDefault';
 
 import LogoApp from '../../assets/logoPhoenix.png';
 import LogoDobes from '../../assets/logoDobes.png';
  
-function ResendmailPassword() {
+function ResendMailPassword({navigation}) {
    return(
       <SafeAreaView style={styles.main}  >
          <ScrollView style={styles.scrollView} contentContainerStyle={{flexGrow : 1, justifyContent : 'center'}} >
@@ -34,7 +34,7 @@ function ResendmailPassword() {
                />
                <View style={styles.viewInfo} >
                   <Text style={styles.textInfo} >
-                     Um e-mail foi enviado para usuário@login.com.br!
+                     Um e-mail foi enviado para usuário@login.com.br
                   </Text>
                   <Text style={styles.textInfo} >  
                      Não recebeu o e-mail? 
@@ -42,8 +42,17 @@ function ResendmailPassword() {
                </View>
                <View style={styles.spacebetween} />
                <View style={styles.content} >
-                  <ButtonDefault style={styles.buttonAcessar} title="Reenviar e-mail" _onPress={() => alert('Teste de press do botão')} />
-                  <Text style={styles.text} >Voltar para tela de login</Text>
+                  <ButtonDefault 
+                     style={styles.buttonAcessar} 
+                     title="Reenviar e-mail" 
+                     _onPress={() => alert('Teste de press do botão')} 
+                  />
+                  <Text 
+                     style={styles.text} 
+                     onPress={() => navigation.navigate('SignIn')}
+                  >
+                     Voltar para tela de login
+                  </Text>
                </View>
                <View>
                   <TouchableOpacity onPress={() => Linking.openURL('https://dobesone.com.br/')} >
@@ -59,4 +68,4 @@ function ResendmailPassword() {
    )
 }
 
-export default ResendmailPassword;
+export default ResendMailPassword;

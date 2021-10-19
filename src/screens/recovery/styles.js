@@ -40,7 +40,8 @@ export const styles = StyleSheet.create({
 
    text: {
       color: theme.colors.text,
-      marginTop: 10
+      marginTop: 10,
+      textDecorationLine: 'underline'
    },
 
    viewInfo: {

@@ -1,24 +1,16 @@
 import React, { setState } from 'react';
-import { 
-   View, 
-   ScrollView,
-   Text, 
-   Image, 
-   StatusBar, 
-   TextInput,  
-   SafeAreaView,
-   TouchableOpacity, 
-   Linking
-} from 'react-native';
+import { View, ScrollView, Text, Image, 
+         StatusBar, TextInput, SafeAreaView,
+         TouchableOpacity, Linking } from 'react-native';
 
 import { styles } from './styles';
 import { theme } from '../../global/theme';
-import { ButtonDefault } from '../../components/button';
+import { ButtonDefault } from '../../components/buttonDefault';
 
 import LogoApp from '../../assets/logoPhoenix.png';
 import LogoDobes from '../../assets/logoDobes.png';
  
-function SignIn() {
+function SignIn({navigation}) {
    return(
       <SafeAreaView style={styles.main}  >
          <ScrollView style={styles.scrollView} contentContainerStyle={{flexGrow : 1, justifyContent : 'center'}} >
@@ -45,9 +37,14 @@ function SignIn() {
                      style={styles.textInput}
                      secureTextEntry
                   />
-                  <Text style={styles.text} >Esqueci a minha senha</Text>   
+                  <Text 
+                     style={styles.text} 
+                     onPress={() => navigation.navigate('RecoveryPassword')} 
+                  >
+                     Esqueci a minha senha
+                  </Text>   
                   <View style={styles.spacebetween} />
-                  <ButtonDefault style={styles.buttonAcessar} title="Acessar" _onPress={() => alert('Teste de press do botão')} />
+                  <ButtonDefault style={styles.buttonAcessar} title="Acessar" />
                </View>
                <View>
                   <TouchableOpacity onPress={() => Linking.openURL('https://dobesone.com.br/')} >

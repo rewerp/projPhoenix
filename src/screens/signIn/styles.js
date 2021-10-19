@@ -5,6 +5,7 @@ export const styles = StyleSheet.create({
    main: {
       flex: 1,
       backgroundColor: theme.colors.backgroundApp,
+      fontFamily: theme. fonts.fontMain
    },
 
    scrollView: {
@@ -39,7 +40,8 @@ export const styles = StyleSheet.create({
 
    text: {
       color: theme.colors.text,
-      marginTop: 10
+      marginTop: 10,
+      textDecorationLine: 'underline'
    },
 
    textInput: {
