@@ -8,6 +8,8 @@ import SignIn from './src/screens/signIn/index';
 import RecoveryPassword from './src/screens/recovery/index';
 import ResendMailPassword from './src/screens/resendMail/index';
 
+import SignIn2 from './src/screens/signIn2/index';
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -20,15 +22,16 @@ export default function App() {
    }
 
    return (
-      <NavigationContainer>
-         <Stack.Navigator 
-            initialRouteName="SignIn" 
-            screenOptions={{headerShown: false}} 
-         >
-            <Stack.Screen name="SignIn" component={SignIn} />
-            <Stack.Screen name="RecoveryPassword" component={RecoveryPassword} />
-            <Stack.Screen name="ResendMailPassword" component={ResendMailPassword} />
-         </Stack.Navigator>
-      </NavigationContainer>
+      // <NavigationContainer>
+      //    <Stack.Navigator 
+      //       initialRouteName="SignIn" 
+      //       screenOptions={{headerShown: false}} 
+      //    >
+      //       <Stack.Screen name="SignIn" component={SignIn} />
+      //       <Stack.Screen name="RecoveryPassword" component={RecoveryPassword} />
+      //       <Stack.Screen name="ResendMailPassword" component={ResendMailPassword} />
+      //    </Stack.Navigator>
+      // </NavigationContainer>
+      <SignIn2 />
    );
 }
