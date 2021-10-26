@@ -4,6 +4,8 @@ import {
    StatusBar, TextInput, TouchableOpacity,
    Linking
 } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { styles } from './styles';
 
@@ -14,7 +16,10 @@ import { UserLogin } from '../../components/UserLogin/index';
 import { RecoveryPassword } from '../../components/RecoveryPassword/index';
 import { ResendMailPassword } from '../../components/ResendMail/index';
 
-export function LoginScreen({ navigation }) {
+
+const Stack = createNativeStackNavigator();
+
+export function LoginScreen() {
    return (
       <ScrollView style={styles.scrollView} contentContainerStyle={{ flexGrow: 1 }} >
          <View style={styles.mainView} >
@@ -34,10 +39,10 @@ export function LoginScreen({ navigation }) {
 
                <NavigationContainer>
                   <Stack.Navigator
-                     initialRouteName="SignIn"
+                     initialRouteName="UserLogin"
                      screenOptions={{ headerShown: false }}
                   >
-                     <Stack.Screen name="SignIn" component={SignIn} />
+                     <Stack.Screen name="UserLogin" component={UserLogin} />
                      <Stack.Screen name="RecoveryPassword" component={RecoveryPassword} />
                      <Stack.Screen name="ResendMailPassword" component={ResendMailPassword} />
                   </Stack.Navigator>

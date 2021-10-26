@@ -22,16 +22,17 @@ export default function App() {
    }
 
    return (
-      // <NavigationContainer>
-      //    <Stack.Navigator 
-      //       initialRouteName="SignIn" 
-      //       screenOptions={{headerShown: false}} 
-      //    >
-      //       <Stack.Screen name="SignIn" component={SignIn} />
-      //       <Stack.Screen name="RecoveryPassword" component={RecoveryPassword} />
-      //       <Stack.Screen name="ResendMailPassword" component={ResendMailPassword} />
-      //    </Stack.Navigator>
-      // </NavigationContainer>
-      <LoginScreen />
+      <NavigationContainer>
+         <Stack.Navigator 
+            initialRouteName="SignIn" 
+            screenOptions={{headerShown: false}} 
+         >
+            <Stack.Screen name="SignIn" component={SignIn} />
+            <Stack.Screen name="RecoveryPassword" component={RecoveryPassword} />
+            <Stack.Screen name="ResendMailPassword" component={ResendMailPassword} />
+         </Stack.Navigator>
+      </NavigationContainer>
+
+      // <LoginScreen />
    );
 }

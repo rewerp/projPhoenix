@@ -15,8 +15,7 @@ export const styles = StyleSheet.create({
    },
 
    topImgView: {
-      // backgroundColor: COLORS.BACKGROUNDAPP,
-      backgroundColor: 'yellow',
+      backgroundColor: COLORS.BACKGROUNDAPP,
       flex: 1.5,
       minHeight: 170,
       alignItems: 'center',
@@ -36,8 +35,7 @@ export const styles = StyleSheet.create({
    },
 
    contentForm: {
-      // backgroundColor: COLORS.BACKGROUNDAPP,
-      backgroundColor: 'red',
+      backgroundColor: COLORS.BACKGROUNDAPP,
       width: '80%',
       alignItems: 'center',
    },
@@ -68,8 +66,7 @@ export const styles = StyleSheet.create({
    },
 
    bottomImgView: {
-      // backgroundColor: COLORS.BACKGROUNDAPP,
-      backgroundColor: 'blue',
+      backgroundColor: COLORS.BACKGROUNDAPP,
       flex: 1.5,
       alignItems: 'center',
       justifyContent: 'flex-start',
