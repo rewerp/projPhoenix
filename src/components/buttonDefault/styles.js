@@ -1,8 +1,9 @@
-import { theme } from "../../global/theme";
+import { StyleSheet } from "react-native";
+import { COLORS, FONTS } from "../../global";
 
-export const styles = {
+export const styles = StyleSheet.create({
    container: {
-      backgroundColor: theme.colors.buttons,
+      backgroundColor: COLORS.BUTTON,
       width: '90%',
       maxWidth: 500,
       height: 40,
@@ -12,9 +13,9 @@ export const styles = {
    },
 
    text: {
-      color: theme.colors.text,
+      color: COLORS.TEXT,
       fontSize: 18,
       fontWeight: 'bold' 
    }
 
-}
+})

@@ -12,7 +12,7 @@ import { ButtonDefault } from '../../components/buttonDefault';
 import LogoApp from '../../assets/logoPhoenix.png';
 import LogoDobes from '../../assets/logoDobes.png';
 
-function SignIn2({ navigation }) {
+function SignIn({ navigation }) {
    return (
       <ScrollView style={styles.scrollView} contentContainerStyle={{ flexGrow: 1 }} >
          <View style={styles.mainView} >
@@ -63,4 +63,4 @@ function SignIn2({ navigation }) {
    )
 }
 
-export default SignIn2;
+export default SignIn;

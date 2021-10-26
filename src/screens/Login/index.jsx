@@ -6,13 +6,15 @@ import {
 } from 'react-native';
 
 import { styles } from './styles';
-import { ButtonDefault } from '../../components/buttonDefault';
 
 import LogoApp from '../../assets/logoPhoenix.png';
 import LogoDobes from '../../assets/logoDobes.png';
-import { COLORS } from '../../global';
 
-export function SignIn({ navigation }) {
+import { UserLogin } from '../../components/UserLogin/index';
+import { RecoveryPassword } from '../../components/RecoveryPassword/index';
+import { ResendMailPassword } from '../../components/ResendMail/index';
+
+export function LoginScreen({ navigation }) {
    return (
       <ScrollView style={styles.scrollView} contentContainerStyle={{ flexGrow: 1 }} >
          <View style={styles.mainView} >
@@ -28,27 +30,20 @@ export function SignIn({ navigation }) {
                />
             </View>
             <View style={styles.componentsView} >
-               <View style={styles.contentForm} >
-                  <TextInput
-                     placeholder="CNPJ"
-                     placeholderTextColor={COLORS.PLACEHOLDER}
-                     style={styles.textInput}
-                     keyboardType="number-pad"
-                  />
-                  <TextInput
-                     placeholder="Senha"
-                     placeholderTextColor={COLORS.PLACEHOLDER}
-                     style={styles.textInput}
-                     secureTextEntry
-                  />
-                  <Text
-                     style={styles.textPress}
-                     onPress={() => navigation.navigate('RecoveryPassword')}
+
+
+               <NavigationContainer>
+                  <Stack.Navigator
+                     initialRouteName="SignIn"
+                     screenOptions={{ headerShown: false }}
                   >
-                     Esqueci a minha senha
-                  </Text>
-                  <ButtonDefault title="Acessar" />
-               </View>
+                     <Stack.Screen name="SignIn" component={SignIn} />
+                     <Stack.Screen name="RecoveryPassword" component={RecoveryPassword} />
+                     <Stack.Screen name="ResendMailPassword" component={ResendMailPassword} />
+                  </Stack.Navigator>
+               </NavigationContainer>
+
+
             </View>
             <View style={styles.bottomImgView} >
                <TouchableOpacity onPress={() => Linking.openURL('https://dobesone.com.br/')} >

@@ -1,79 +1,77 @@
 import { StyleSheet } from "react-native";
-import { theme } from '../../global/theme'
+import { COLORS, FONTS } from "../../global";
 
 export const styles = StyleSheet.create({
-   main: {
-      flex: 1,
-      backgroundColor: theme.colors.backgroundApp,
-   },
 
    scrollView: {
-      backgroundColor: theme.colors.backgroundApp,
+      backgroundColor: COLORS.BACKGROUNDAPP,
+      flexGrow: 1
    },
 
-   container: {
-      maxWidth: '100%',
+   mainView: {
+      backgroundColor: COLORS.BACKGROUNDAPP,
+      flex: 1,
+      flexDirection: 'column',
+   },
+
+   topImgView: {
+      // backgroundColor: COLORS.BACKGROUNDAPP,
+      backgroundColor: 'yellow',
+      flex: 1.5,
+      minHeight: 170,
+      alignItems: 'center',
+      justifyContent: 'flex-end'
+   },
+
+   logoApp: {
+      // marginVertical: 30
+   },
+
+   componentsView: {
+      backgroundColor: COLORS.BACKGROUNDAPP,
+      flex: 5,
+      minHeight: 250,
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: theme.colors.backgroundApp,
-      paddingVertical: 20
    },
 
-   logoapp: {
-      width: 119,
-      height: 147,
-      marginBottom: 20
-   },
-
-   content: {
-      width: '100%',
-      maxWidth: 300,
-      paddingHorizontal: 20,
+   contentForm: {
+      // backgroundColor: COLORS.BACKGROUNDAPP,
+      backgroundColor: 'red',
+      width: '80%',
       alignItems: 'center',
    },
 
-   logodobes: {
-      marginTop: 90,
-      width: 140,
-      height: 24
-   },
-
-   viewInfo: {
-      marginHorizontal: 50,
-      justifyContent: 'center',
-      alignItems: 'center',
-   },
-
-   text: {
-      color: theme.colors.text,
-      marginTop: 10,
-      textDecorationLine: 'underline'
+   infoView: {
+      marginBottom: 20,
    },
 
    textInfo: {
-      color: theme.colors.text,
+      color: COLORS.TEXT,
       fontWeight: 'bold',
-      marginTop: 30,
+      fontSize: 13,
       textAlign: 'center',
+      marginBottom: 20,
    },
 
-   textInput: {
+   textPress: {
+      color: COLORS.TEXT,
+      textDecorationLine: 'underline',
+      marginTop: 20,
+   },
+
+   bottomImgView: {
+      // backgroundColor: COLORS.BACKGROUNDAPP,
+      backgroundColor: 'blue',
+      flex: 1.5,
       alignItems: 'center',
-      justifyContent: 'center',
-      alignContent: 'center',
-      color: theme.colors.textInputs,
-
-      borderWidth: 1,
-      borderColor: theme.colors.inputBorder,
-      borderRadius: 5,
-
-      width: '100%',
-      height: 40,
-      textAlign: 'center',
-      marginTop: 30
+      justifyContent: 'flex-start',
+      minHeight: 50
    },
 
-   spacebetween: {
-      marginTop: 30,
+   logoDobes: {
+      width: 178,
+      height: 31,
    }
+
 });

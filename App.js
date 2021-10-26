@@ -4,11 +4,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useFonts, Roboto_400Regular } from '@expo-google-fonts/roboto';
 
-import SignIn from './src/screens/signIn/index';
-import RecoveryPassword from './src/screens/recovery/index';
-import ResendMailPassword from './src/screens/resendMail/index';
+import { SignIn } from './src/screens/signIn/index';
+import { RecoveryPassword } from './src/screens/recovery/index';
+import { ResendMailPassword } from './src/screens/resendMail/index';
 
-import SignIn2 from './src/screens/signIn2/index';
+import { LoginScreen } from './src/screens/Login';
 
 const Stack = createNativeStackNavigator();
 
@@ -32,6 +32,6 @@ export default function App() {
       //       <Stack.Screen name="ResendMailPassword" component={ResendMailPassword} />
       //    </Stack.Navigator>
       // </NavigationContainer>
-      <SignIn2 />
+      <LoginScreen />
    );
 }

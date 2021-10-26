@@ -1,0 +1,8 @@
+export const COLORS = {
+   BACKGROUNDAPP: '#231F20',
+   BUTTON: '#F36E21',
+   TEXT: '#FFFF',
+   TEXTINPUT: '#C4C4C4',
+   PLACEHOLDER: '#57585A',
+   INPUTBORDER: '#A8A9AD',
+}
