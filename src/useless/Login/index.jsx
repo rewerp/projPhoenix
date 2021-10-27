@@ -4,8 +4,7 @@ import {
    StatusBar, TextInput, TouchableOpacity,
    Linking
 } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 
 import { styles } from './styles';
 
@@ -15,9 +14,8 @@ import LogoDobes from '../../assets/logoDobes.png';
 import { UserLogin } from '../../components/UserLogin/index';
 import { RecoveryPassword } from '../../components/RecoveryPassword/index';
 import { ResendMailPassword } from '../../components/ResendMail/index';
+import { Router } from '../../routes';
 
-
-const Stack = createNativeStackNavigator();
 
 export function LoginScreen() {
    return (
@@ -36,18 +34,7 @@ export function LoginScreen() {
             </View>
             <View style={styles.componentsView} >
 
-
-               <NavigationContainer>
-                  <Stack.Navigator
-                     initialRouteName="UserLogin"
-                     screenOptions={{ headerShown: false }}
-                  >
-                     <Stack.Screen name="UserLogin" component={UserLogin} />
-                     <Stack.Screen name="RecoveryPassword" component={RecoveryPassword} />
-                     <Stack.Screen name="ResendMailPassword" component={ResendMailPassword} />
-                  </Stack.Navigator>
-               </NavigationContainer>
-
+               <Router />
 
             </View>
             <View style={styles.bottomImgView} >

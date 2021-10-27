@@ -1,4 +1,4 @@
-import React, { setState } from 'react';
+import React, { setState, useState } from 'react';
 import {
    View, ScrollView, Text, Image,
    StatusBar, TextInput, TouchableOpacity,
@@ -12,9 +12,26 @@ import LogoApp from '../../assets/logoPhoenix.png';
 import LogoDobes from '../../assets/logoDobes.png';
 import { COLORS } from '../../global';
 
-export function SignIn({ navigation }) {
+
+function userValidate(userLogin, userPassword) {
+
+   if (!(userLogin === '123456' && userPassword === '123456')) {
+      return(
+         alert('Dados de login estão errados!')
+      );
+   }
+
    return (
-      <ScrollView style={styles.scrollView} contentContainerStyle={{ flexGrow: 1 }} >
+      alert('DEU BOM!')
+   );
+}
+
+export function SignIn({ navigation }) {
+   const [userLogin, setUserLogin] = useState('');
+   const [userPassword, setUserPassword] = useState('');
+
+   return (
+      <ScrollView contentContainerStyle={styles.scrollView} >
          <View style={styles.mainView} >
             <View style={styles.topImgView} >
                <StatusBar
@@ -34,12 +51,14 @@ export function SignIn({ navigation }) {
                      placeholderTextColor={COLORS.PLACEHOLDER}
                      style={styles.textInput}
                      keyboardType="number-pad"
+                     onChangeText={setUserPassword}
                   />
                   <TextInput
                      placeholder="Senha"
                      placeholderTextColor={COLORS.PLACEHOLDER}
                      style={styles.textInput}
                      secureTextEntry
+                     onChangeText={setUserLogin}
                   />
                   <Text
                      style={styles.textPress}
@@ -47,7 +66,10 @@ export function SignIn({ navigation }) {
                   >
                      Esqueci a minha senha
                   </Text>
-                  <ButtonDefault title="Acessar" />
+                  <ButtonDefault 
+                     title="Acessar" 
+                     _onPress={() => userValidate(userLogin, userPassword)}
+                  />
                </View>
             </View>
             <View style={styles.bottomImgView} >

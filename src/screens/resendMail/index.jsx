@@ -13,7 +13,7 @@ import LogoDobes from '../../assets/logoDobes.png';
 
 export function ResendMailPassword({ navigation }) {
    return (
-      <ScrollView style={styles.scrollView} contentContainerStyle={styles.scrollView} >
+      <ScrollView contentContainerStyle={styles.scrollView} >
          <View style={styles.mainView} >
             <View style={styles.topImgView} >
                <StatusBar

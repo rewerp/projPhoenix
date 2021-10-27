@@ -15,7 +15,7 @@ import { COLORS } from '../../global';
 
 export function RecoveryPassword({ navigation }) {
    return (
-      <ScrollView style={styles.scrollView} contentContainerStyle={styles.scrollView} >
+      <ScrollView contentContainerStyle={styles.scrollView} >
          <View style={styles.mainView} >
             <View style={styles.topImgView} >
                <StatusBar

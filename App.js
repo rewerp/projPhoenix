@@ -7,8 +7,8 @@ import { useFonts, Roboto_400Regular } from '@expo-google-fonts/roboto';
 import { SignIn } from './src/screens/signIn/index';
 import { RecoveryPassword } from './src/screens/recovery/index';
 import { ResendMailPassword } from './src/screens/resendMail/index';
+import { Home } from './src/screens/home/index'
 
-import { LoginScreen } from './src/screens/Login';
 
 const Stack = createNativeStackNavigator();
 
@@ -30,9 +30,8 @@ export default function App() {
             <Stack.Screen name="SignIn" component={SignIn} />
             <Stack.Screen name="RecoveryPassword" component={RecoveryPassword} />
             <Stack.Screen name="ResendMailPassword" component={ResendMailPassword} />
+            <Stack.Screen name="Home" component={Home} />
          </Stack.Navigator>
       </NavigationContainer>
-
-      // <LoginScreen />
    );
 }

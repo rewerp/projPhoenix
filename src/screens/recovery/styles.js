@@ -45,14 +45,16 @@ export const styles = StyleSheet.create({
       fontWeight: 'bold',
       fontSize: 13,
       textAlign: 'center',
+      maxWidth: 500,
       marginBottom: 20,
    },
 
    textInput: {
       borderWidth: 1,
+      color: COLORS.TEXTINPUT,
       borderColor: COLORS.INPUTBORDER,
       borderRadius: 5,
-      width: '90%',
+      width: '100%',
       height: 40,
       maxWidth: 500,
       textAlign: 'center',

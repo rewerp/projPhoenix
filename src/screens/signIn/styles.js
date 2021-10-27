@@ -5,6 +5,7 @@ export const styles = StyleSheet.create({
 
    scrollView: {
       backgroundColor: COLORS.BACKGROUNDAPP,
+      flexGrow: 1,
    },
 
    mainView: {
@@ -35,15 +36,18 @@ export const styles = StyleSheet.create({
 
    contentForm: {
       backgroundColor: COLORS.BACKGROUNDAPP,
+      height: '100%',
       width: '80%',
       alignItems: 'center',
+      justifyContent: 'center',
    },
 
    textInput: {
       borderWidth: 1,
+      color: COLORS.TEXTINPUT,
       borderColor: COLORS.INPUTBORDER,
       borderRadius: 5,
-      width: '90%',
+      width: '100%',
       height: 40,
       maxWidth: 500,
       textAlign: 'center',

@@ -2,20 +2,27 @@ import { StyleSheet } from "react-native";
 import { COLORS, FONTS } from "../../global";
 
 export const styles = StyleSheet.create({
-   container: {
-      backgroundColor: COLORS.BUTTON,
+
+   scrollView: {
+      flexGrow: 1,
+      backgroundColor: COLORS.BACKGROUNDAPP,
+   },
+
+   mainView: {
       width: '100%',
-      maxWidth: 500,
-      height: 40,
-      borderRadius: 5,
+      height: '100%',
       alignItems: 'center',
       justifyContent: 'center',
    },
 
-   text: {
+   logoApp: {
+      marginBottom: 50,
+   },
+
+   textInfo: {
       color: COLORS.TEXT,
-      fontSize: 18,
-      fontWeight: 'bold' 
+      fontWeight: 'bold',
+      fontSize: 30,
    }
 
 })
