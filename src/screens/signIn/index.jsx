@@ -14,16 +14,9 @@ import { COLORS } from '../../global';
 
 
 function userValidate(userLogin, userPassword) {
-
-   if (!(userLogin === '123456' && userPassword === '123456')) {
-      return(
-         alert('Dados de login estão errados!')
-      );
-   }
-
    return (
-      alert('DEU BOM!')
-   );
+      (userLogin === '111' && userPassword === '222')
+   )
 }
 
 export function SignIn({ navigation }) {
@@ -31,8 +24,8 @@ export function SignIn({ navigation }) {
    const [userPassword, setUserPassword] = useState('');
 
    return (
-      <ScrollView contentContainerStyle={styles.scrollView} >
-         <View style={styles.mainView} >
+      <View style={styles.mainView} >
+         <ScrollView contentContainerStyle={styles.scrollView} >
             <View style={styles.topImgView} >
                <StatusBar
                   barStyle="light-content"
@@ -66,9 +59,9 @@ export function SignIn({ navigation }) {
                   >
                      Esqueci a minha senha
                   </Text>
-                  <ButtonDefault 
-                     title="Acessar" 
-                     _onPress={() => userValidate(userLogin, userPassword)}
+                  <ButtonDefault
+                     title="Acessar"
+                     _onPress={() => userValidate(userLogin, userPassword) ? navigation.navigate('Home') : (alert('Dados de login estão errados!'))}
                   />
                </View>
             </View>
@@ -80,7 +73,7 @@ export function SignIn({ navigation }) {
                   />
                </TouchableOpacity>
             </View>
-         </View>
-      </ScrollView>
+         </ScrollView>
+      </View>
    )
 }

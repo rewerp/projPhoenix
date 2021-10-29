@@ -3,15 +3,15 @@ import { COLORS, FONTS } from "../../global";
 
 export const styles = StyleSheet.create({
 
-   scrollView: {
-      backgroundColor: COLORS.BACKGROUNDAPP,
-      flexGrow: 1,
-   },
-
    mainView: {
       backgroundColor: COLORS.BACKGROUNDAPP,
       flex: 1,
       flexDirection: 'column',
+   },
+
+   scrollView: {
+      backgroundColor: COLORS.BACKGROUNDAPP,
+      flexGrow: 1,
    },
 
    topImgView: {

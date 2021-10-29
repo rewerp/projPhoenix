@@ -1,8 +1,9 @@
 import React from 'react';
 import AppLoading from 'expo-app-loading';
+import { View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { useFonts, Roboto_400Regular } from '@expo-google-fonts/roboto';
+import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
 
 import { SignIn } from './src/screens/signIn/index';
 import { RecoveryPassword } from './src/screens/recovery/index';
@@ -14,7 +15,8 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
    const [fontsLoaded] = useFonts({
-      Roboto_400Regular
+      Roboto_400Regular,
+      Roboto_700Bold
    });
 
    if (!fontsLoaded) {
@@ -23,9 +25,9 @@ export default function App() {
 
    return (
       <NavigationContainer>
-         <Stack.Navigator 
-            initialRouteName="SignIn" 
-            screenOptions={{headerShown: false}} 
+         <Stack.Navigator
+            initialRouteName="SignIn"
+            screenOptions={{ headerShown: false }}
          >
             <Stack.Screen name="SignIn" component={SignIn} />
             <Stack.Screen name="RecoveryPassword" component={RecoveryPassword} />

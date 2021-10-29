@@ -7,7 +7,6 @@ import {
 
 import { styles } from './styles';
 import { ButtonDefault } from '../../components/buttonDefault';
-import EnviarEmail from '../recovery/functions';
 
 import LogoApp from '../../assets/logoPhoenix.png';
 import LogoDobes from '../../assets/logoDobes.png';
@@ -15,8 +14,8 @@ import { COLORS } from '../../global';
 
 export function RecoveryPassword({ navigation }) {
    return (
-      <ScrollView contentContainerStyle={styles.scrollView} >
-         <View style={styles.mainView} >
+      <View style={styles.mainView} >
+         <ScrollView contentContainerStyle={styles.scrollView} >
             <View style={styles.topImgView} >
                <StatusBar
                   barStyle="light-content"
@@ -60,7 +59,7 @@ export function RecoveryPassword({ navigation }) {
                   />
                </TouchableOpacity>
             </View>
-         </View>
-      </ScrollView>
+         </ScrollView>
+      </View>
    )
 }
