@@ -11,7 +11,10 @@ export function Home({ navigation }) {
       <View style={styles.mainView} >
          <ScrollView contentContainerStyle={styles.scrollView} >
             <View style={styles.logoutView} >
-               <TouchableOpacity style={styles.logoutButton} >
+               <TouchableOpacity 
+                  style={styles.logoutButton}
+                  onPress={() => navigation.navigate('SignIn')} 
+               >
                   <Text style={styles.textLogout} >
                      Sair
                   </Text>
