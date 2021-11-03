@@ -1,4 +1,4 @@
-import React, { setState, useState } from 'react';
+import React, { setState, useRef, useState } from 'react';
 import {
    View, ScrollView, Text, Image,
    StatusBar, TextInput, TouchableOpacity,
@@ -11,17 +11,29 @@ import { ButtonDefault } from '../../components/buttonDefault';
 import LogoApp from '../../assets/logoPhoenix.png';
 import LogoDobes from '../../assets/logoDobes.png';
 import { COLORS } from '../../global';
+import { TextInputMask } from 'react-native-masked-text';
 
 
 function userValidate(userLogin, userPassword) {
    return (
-      (userLogin === '111' && userPassword === '222')
+      // alert(`Senha: ${userPassword}`)
+      (userLogin === '00000000000000' && userPassword === '')
    )
 }
 
 export function SignIn({ navigation }) {
    const [userLogin, setUserLogin] = useState('');
    const [userPassword, setUserPassword] = useState('');
+   const [cnpj, setCnpj] = useState('');
+   const cnpjRef = useRef(null);
+
+
+   function extractCnpj() {
+      const userLogin = cnpjRef?.current.getRawValue();
+      const cnpjValid = cnpjRef?.current.isValid();
+
+      return (userLogin);
+   }
 
    return (
       <View style={styles.mainView} >
@@ -39,13 +51,26 @@ export function SignIn({ navigation }) {
             </View>
             <View style={styles.componentsView} >
                <View style={styles.contentForm} >
-                  <TextInput
+                  <TextInputMask
+                     style={styles.textInput}
+                     placeholder="CNPJ"
+                     placeholderTextColor={COLORS.PLACEHOLDER}
+                     clearButtonMode="while-editing"
+                     type={'cnpj'}
+                     options={{
+                        format: '99.999.999/9999-99'
+                     }}
+                     value={cnpj}
+                     onChangeText={text => setCnpj(text)}
+                     ref={cnpjRef}
+                  />
+                  {/* <TextInput
                      placeholder="CNPJ"
                      placeholderTextColor={COLORS.PLACEHOLDER}
                      style={styles.textInput}
                      keyboardType="number-pad"
                      onChangeText={setUserPassword}
-                  />
+                  /> */}
                   <TextInput
                      placeholder="Senha"
                      placeholderTextColor={COLORS.PLACEHOLDER}
@@ -61,7 +86,7 @@ export function SignIn({ navigation }) {
                   </Text>
                   <ButtonDefault
                      title="Acessar"
-                     _onPress={() => userValidate(userLogin, userPassword) ? navigation.navigate('Home') : (alert('Dados de login estão errados!'))}
+                     _onPress={() => userValidate(extractCnpj(), userPassword) ? navigation.navigate('Home') : (alert('Dados de login estão errados!'))}
                   />
                </View>
             </View>
