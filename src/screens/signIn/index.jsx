@@ -4,19 +4,18 @@ import {
    StatusBar, TextInput, TouchableOpacity,
    Linking
 } from 'react-native';
+import { TextInputMask } from 'react-native-masked-text';
 
 import { styles } from './styles';
+import { COLORS } from '../../global';
 import { ButtonDefault } from '../../components/buttonDefault';
 
 import LogoApp from '../../assets/logoPhoenix.png';
 import LogoDobes from '../../assets/logoDobes.png';
-import { COLORS } from '../../global';
-import { TextInputMask } from 'react-native-masked-text';
 
 
 function userValidate(userLogin, userPassword) {
    return (
-      // alert(`Senha: ${userPassword}`)
       (userLogin === '00000000000000' && userPassword === '')
    )
 }
