@@ -3,32 +3,40 @@ import { COLORS, FONTS } from "../../global";
 
 export const styles = StyleSheet.create({
 
-   scrollView: {
-      backgroundColor: COLORS.BACKGROUNDAPP,
-      flexGrow: 1
-   },
-
    mainView: {
       backgroundColor: COLORS.BACKGROUNDAPP,
       flex: 1,
       flexDirection: 'column',
    },
-
+   
+   scrollView: {
+      backgroundColor: COLORS.BACKGROUNDAPP,
+      flexGrow: 1
+   },
+   
    topImgView: {
       backgroundColor: COLORS.BACKGROUNDAPP,
       flex: 1.5,
       minHeight: 170,
       alignItems: 'center',
-      justifyContent: 'flex-end'
+      justifyContent: 'flex-end',
    },
 
-   logoApp: {
-      // marginVertical: 30
+   logoImage: {
+      marginTop: 20,
+      height: 120,
+      width: 120,
+   },
+
+   logoName: {
+      marginTop: 10,
+      height: 24.04,
+      width: 120,
    },
 
    componentsView: {
       backgroundColor: COLORS.BACKGROUNDAPP,
-      flex: 5,
+      flex: 3,
       minHeight: 250,
       alignItems: 'center',
       justifyContent: 'center',
@@ -36,8 +44,10 @@ export const styles = StyleSheet.create({
 
    contentForm: {
       backgroundColor: COLORS.BACKGROUNDAPP,
+      height: '100%',
       width: '80%',
       alignItems: 'center',
+      justifyContent: 'center',
    },
 
    infoView: {

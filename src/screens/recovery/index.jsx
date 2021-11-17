@@ -8,7 +8,8 @@ import {
 import { styles } from './styles';
 import { ButtonDefault } from '../../components/buttonDefault';
 
-import LogoApp from '../../assets/logoPhoenix.png';
+import LogoImage from '../../assets/logoImage.png';
+import LogoName from '../../assets/logoName.png';
 import LogoDobes from '../../assets/logoDobes.png';
 import { COLORS } from '../../global';
 
@@ -23,8 +24,12 @@ export function RecoveryPassword({ navigation }) {
                   translucent
                />
                <Image
-                  style={styles.logoApp}
-                  source={LogoApp}
+                  style={styles.logoImage}
+                  source={LogoImage}
+               />
+               <Image
+                  style={styles.logoName}
+                  source={LogoName}
                />
             </View>
             <View style={styles.componentsView} >

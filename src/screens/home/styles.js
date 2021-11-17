@@ -8,21 +8,23 @@ export const styles = StyleSheet.create({
       flex: 1,
       flexDirection: 'column',
    },
-
+   
    scrollView: {
       flexGrow: 1,
       backgroundColor: COLORS.BACKGROUNDAPP,
    },
 
    logoutView: {
-      flex: 1,
+      flex: 0.5,
       alignItems: 'flex-end',
-      justifyContent: 'flex-end',
-      backgroundColor: 'red',
+      justifyContent: 'flex-start',
+      backgroundColor: COLORS.BACKGROUNDAPP,
+      // backgroundColor: 'red',
    },
 
    logoutButton: {
-      backgroundColor: 'green',
+      backgroundColor: COLORS.BACKGROUNDAPP,
+      // backgroundColor: 'green',
       width: 60,
       height: '100%',
       alignItems: 'center',
@@ -37,19 +39,29 @@ export const styles = StyleSheet.create({
 
    welcomeView: {
       flex: 8,
-      backgroundColor: 'blue',
+      backgroundColor: COLORS.BACKGROUNDAPP,
+      // backgroundColor: 'blue',
       alignItems: 'center',
       justifyContent: 'center',
    },
 
-   logoApp: {
-      marginBottom: 50,
+   logoImage: {
+      marginTop: 20,
+      height: 120,
+      width: 120,
+   },
+
+   logoName: {
+      marginTop: 10,
+      height: 24.04,
+      width: 120,
    },
 
    textInfo: {
       color: COLORS.TEXT,
       fontWeight: 'bold',
       fontSize: 30,
+      marginTop: 100,
    }
 
 })
